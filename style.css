@@ -1,0 +1,883 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    width: 100%;
+    height: 100%;
+}
+/* page 1 */
+#page-1{
+    width: 100%;
+    height: 100%;
+    background-image: url(https://cdn.shopify.com/s/files/1/0627/7657/4171/files/01_Main_Banner_-_Desktop.png?crop=center&height=2400&v=1651457282&width=2400);
+    background-size: cover;
+    background-position: center;
+}
+#nav{
+    width: 100%;
+    height: 100px;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 0 40px; */
+    position: relative;
+    z-index: 99;
+}
+#slide{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    position: absolute;
+    top: -100%;
+    transition: all ease .5s;  
+}
+:root:not(.scrolled) #slide:not(:hover), :root:not(.scrolled) .header-wrapper:not(:hover) .header__main-links .parent-link-wrapper {
+    color: white;
+}
+    /* color: var(--header-text-color); */
+#n-left ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    list-style: none;
+    /* background-color: blue; */
+    padding: 0 30px;
+    color: white;
+    transition: all ease .6s;
+
+    
+}
+#n-center h1{
+    font-size: 50xp;
+    font-family: gilroy;
+    font-weight: 900;
+    color: white;
+    transition: all ease .6s;
+
+}
+#n-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 200px;
+    list-style: none;
+    padding-right: 30px;
+    transition: all ease .6s;
+
+}
+#n-right i{
+    font-size: 30px;
+    color: white;
+    font-weight: 100;
+    transition: all ease .6s;
+
+}
+#nav:hover #slide{
+    top: 0%;
+    z-index: -1;
+}
+#nav:hover i,#nav:hover li,#nav:hover h1{
+    color: black;
+}
+
+/* text -center */
+#content{
+    width: 100%;
+    height: calc(100% - 100px);
+    /* background-color: red; */   
+}
+#text-c{
+    width: 30%;
+    height: 100%;
+    /* background-color: gray; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 60px 50px;
+}
+#text-c h6{
+    font-size: 14px;
+    font-family: gilroy;
+    color: white;
+    padding-bottom: 5px;
+}
+#text-c h2{
+    font-size: 30px;
+    font-family: gilroy;
+    color: white;
+    font-weight: 300;
+    padding-bottom: 25px;
+}
+#text-c button{
+    width: 250px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    font-size: 10px;
+    font-weight: 600;
+    font-family: gilroy;  
+}
+/* *********** Page 2 ************** */
+#page-2{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    position: relative;
+}
+#page-2 h6{
+    position: absolute;
+    top:5%;
+    left: 2%;
+    font-size: 13px;
+    color: black;
+    font-weight: 400;
+}
+#page-2 a{
+    position: absolute;
+    top: 4%;
+    left: 90%;
+    /* color: forestgreen; */
+    color: black;
+    font-size: 12px;
+    font-weight: 600;
+  }
+.wrapper{
+    width: 100%;
+    height: 90%;
+    /* background-color: rebeccapurple; */
+    white-space: nowrap;
+    overflow-y: hidden;
+    padding-top: 40px;
+    /* overflow-x: auto; */
+}
+.wrapper::-webkit-scrollbar{ 
+   width:5%;
+   height: 5px;
+}
+.wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+
+}  
+.wrapper::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+.card{
+    width: 300px;
+    height: 450px;
+    background-color: #F0F0F0;
+    position: relative;
+    margin: 70px 10px;
+    display: inline-block;
+}
+.top{
+    width: 100%;
+    height: 70%;
+    /* background-color: aquamarine; */
+    transition: all ease .6s;
+}
+
+.top img{
+    height: 100%;
+    width: 100%;
+}
+.bottom{
+    width: 100%;
+    height: 30%;
+    background-color:rgb(246, 245, 245);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    /* border: 1px solid rgb(226, 226, 226); */
+    /* box-shadow: 0 0 2px rgb(226, 226, 226) ; */
+}
+.bottom h5{
+    font-size: 15px;
+    font-family: gilroy;
+    padding: 0 15px;
+    color: gray;
+}
+.bottom p{
+    font-size: 13px;
+    font-family: gilroy;
+    font-weight: 300;
+    padding: 0 15px;
+}
+.bottom p>span{
+    margin-left: 40px;
+    font-style: italic;
+}
+.bottom button{
+    width: 300px;
+    height: 35px;
+    text-align: center;
+    border-radius: 50px;
+    border: 1px solid gray;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 20px 50px;
+    margin: 0 auto;
+}
+.bottom button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    /* margin-left: 100px; */
+}
+
+.card #top-1{
+    background-image: url(https://cdn.shopify.com/s/files/1/0627/7657/4171/files/02_Kitsch.jpg?crop=center&format=pjpg&height=1398&v=1664334995&width=960);
+    background-size: cover;
+    background-position: center;
+} 
+.card #top-1:hover{
+    background-image: url(https://cdn.shopify.com/s/files/1/0627/7657/4171/files/04_Kitsch.jpg?crop=center&format=pjpg&height=1398&v=1664335014&width=960);    
+}
+.card #top-2{
+    background-image: url(https://cdn.shopify.com/s/files/1/0627/7657/4171/files/02_Bunny.jpg?crop=center&format=pjpg&height=1398&v=1664335221&width=960);
+    background-size: cover;
+    background-position: center;
+} 
+.card #top-2:hover{
+    background-image: url(https://cdn.shopify.com/s/files/1/0627/7657/4171/files/04_Bunny.jpg?crop=center&format=pjpg&height=1398&v=1664335227&width=960);    
+}
+
+.card #top-3{
+    background-image: url(https://cdn.shopify.com/s/files/1/0627/7657/4171/files/02_Soft_Serve.jpg?crop=center&format=pjpg&height=1398&v=1664335625&width=960);
+    background-size: cover;
+    background-position: center;
+} 
+.card #top-3:hover{
+    background-image: url(https://cdn.shopify.com/s/files/1/0627/7657/4171/files/03_Soft_Serve.jpg?crop=center&format=pjpg&height=1398&v=1664335631&width=960);    
+}
+
+.card #top-4{
+    background-image: url(https://cdn.shopify.com/s/files/1/0627/7657/4171/files/02_Girlish.jpg?crop=center&format=pjpg&height=1398&v=1664335987&width=960);
+    background-size: cover;
+    background-position: center;
+} 
+.card #top-4:hover{
+    background-image: url(https://cdn.shopify.com/s/files/1/0627/7657/4171/files/04_Girlish.jpg?crop=center&format=pjpg&height=1398&v=1664335993&width=960);    
+}
+.card #top-5{
+    background-image: url(https://cdn.shopify.com/s/files/1/0627/7657/4171/files/02_Rosas.jpg?crop=center&format=pjpg&height=1398&v=1664336286&width=960);
+    background-size: cover;
+    background-position: center;
+} 
+.card #top-5:hover{
+    background-image: url(https://cdn.shopify.com/s/files/1/0627/7657/4171/files/03_Rosas.jpg?crop=center&format=pjpg&height=1398&v=1664336294&width=960);    
+}
+
+.card #top-6{
+    background-image: url(https://cdn.shopify.com/s/files/1/0627/7657/4171/files/02_Party.jpg?crop=center&format=pjpg&height=1398&v=1664335086&width=960);
+    background-size: cover;
+    background-position: center;
+} 
+.card #top-6:hover{
+    background-image: url(https://cdn.shopify.com/s/files/1/0627/7657/4171/files/04_Party.jpg?crop=center&format=pjpg&height=1398&v=1664335099&width=960);    
+}
+
+.card #top-7{
+    background-image: url(https://cdn.shopify.com/s/files/1/0627/7657/4171/files/Swoosh_-_nudist.png?crop=center&format=pjpg&height=1398&v=1652316813&width=960);
+    background-size: cover;
+    background-position: center;
+} 
+.card #top-7:hover{
+    background-image: url(https://cdn.shopify.com/s/files/1/0627/7657/4171/files/Hover_-_Nudist.png?crop=center&format=pjpg&height=1398&v=1651715833&width=960);    
+}
+
+.card #top-8{
+    background-image: url(https://cdn.shopify.com/s/files/1/0627/7657/4171/files/02Swoosh-major_f65f0f0d-56a0-46e4-8bd9-64f31fffa9f8.png?crop=center&format=pjpg&height=1398&v=1652241868&width=960);
+    background-size: cover;
+    background-position: center;
+} 
+.card #top-8:hover{
+    background-image: url(https://cdn.shopify.com/s/files/1/0627/7657/4171/files/Hover_-_Major.png?crop=center&format=pjpg&height=1398&v=1651715833&width=960);    
+}
+
+/* *********page-3 ************ */
+#page-3{
+    width: 100%;
+    height: 50%;
+    background-color: #F3EFEA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    position: relative;
+    padding-top: 20px;
+    overflow: hidden;
+    padding-left: 50px;
+}
+.item{
+    width: 350px; 
+    height: 300px;
+    /* background-color: green; */
+    position: relative;
+}
+.img-div{
+    text-align: center;
+    /* background-color:yellow; */
+}
+.img-div img{
+    object-fit:cover;
+    object-position: center;
+    height: 70px;
+}
+.content{
+    width: 100%;
+    height: 200px;
+    font-size: 22px;
+    /* background-color: antiquewhite; */
+    text-align: center; 
+    padding-top: 20px;  
+}
+
+.content button{
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: underline;
+    border: none;
+    background-color: #F3EFEA;
+    margin-block: 35px;
+    cursor: pointer;
+    margin-top: 30px;
+   
+}
+#btn3{
+    margin-top: 45px;
+}
+#page-3::after{
+    content: '<';
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+    background-color: #E6D2C3;
+    position: absolute;
+    right: -10%;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 200;
+    transition: all ease .5s;
+}
+#page-3::before{
+    content:  '>';
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+    background-color:#E6D2C3;
+    position: absolute;
+    left: -10%;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 200;
+    transition: all ease .5s;
+}
+#page-3:hover::before{
+    left: 2%;
+}
+#page-3:hover::after{
+    right: 2%;
+}
+
+/* ***************page-4 *************/
+#page-4{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#page-4 video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#page-4 button{
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 4px;
+    border: none;
+    background-color: transparent;
+}
+/* ********** Pag3 -5********** */
+#page-5{
+    width: 100%;
+    height: 100%;    
+    background-color: #F3EFEA;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+#left{
+    width: 40%;
+    height: 90%;
+    /* background-color: yellow; */
+}
+#left img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#right{
+    width: 40%;
+    height: 90%;
+    /* background-color:aqua; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+#right p{
+    font-size: 34px;
+    font-weight: 500;
+    padding-inline: 40px;
+}
+#right button{
+    font-size: 12px;
+    font-weight: 600;
+    border: none;
+    text-decoration: underline;
+    background-color: #F3EFEA;
+    padding-inline: 40px;
+
+}
+
+/* *********Page-6 ************ */
+#page-6{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    white-space:nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    overflow-x: auto;
+}
+#page-6::-webkit-scrollbar{
+    display: none;
+}
+#page-6 p{
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 15px;
+    /* background-color: rebeccapurple; */
+    display: inline-block;
+    animation: slide 2s linear infinite;
+}
+
+/* ************** Page -7************** */
+
+#page-7{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    position: relative;
+    background-image: url(https://sunniesface.com/cdn/shop/files/Shop_The_Look_Kitsch_-_Desktop.jpg?crop=center&height=3020&v=1664320379&width=5760);
+    background-repeat: no-repeat;
+    background-size:cover ;
+    background-position: center;
+}
+.wrapper-7{
+    width: 280px;
+    height: 500px;
+    /* background-color: rebeccapurple; */
+    position: absolute;
+    left: 20%;
+    top: 15%;
+    border-radius: 5px 5px 0 0;
+}
+#wrap-top{
+    width: 100%;
+    height: 70%;
+    /* background-color: green; */
+    background-image: url(https://sunniesface.com/cdn/shop/products/01Kitsch.jpg?crop=center&format=pjpg&height=664&v=1664343230&width=650);
+    background-size: cover;
+    background-position: center;
+    transition: all ease .2s;
+    border-radius: 10px 10px 0 0;
+
+
+}
+#wrap-top img{
+    width: 100%;
+    height: 100%;
+}
+#wrap-top:hover{
+    background-image: url(https://sunniesface.com/cdn/shop/files/Fluffmatte_Swoosh_15.png?crop=center&height=1398&v=1652175889&width=960);
+    background-size: cover;
+    background-position: center;
+}
+#wrap-bottom{
+    width: 100%;
+    height: 30%;
+    background-color:white;
+    border-radius: 0px 0px 10px 10px;
+}
+#wrap-bottom h5{
+    padding: 10px 8px;
+}
+#wrap-bottom p{
+    padding: 2px 8px;
+    font-size: 14px;
+    margin-bottom:4px;
+    color: #5d5b5b;
+}
+#wrap-bottom h6{
+    font-style: italic;
+    font-weight: 400;
+    margin-left: 6px;
+    margin-top: 2px;
+}
+#wrap-bottom button{
+    width: 250px;
+    height: 30px;
+    margin-left: 20px;
+    border-radius: 50px;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 10px;
+    border: 1px solid #888;
+    color: #888;
+    cursor: pointer;
+}
+
+#inputs{
+    cursor: pointer;
+    width: 100%;
+    height: 30px;
+    padding: 2px 0;
+    /* background-color: rebeccapurple; */
+    position: relative;
+}
+#inputs .inps{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: yellowgreen;
+    display: inline-block;
+    margin: 1px 0;
+}
+#inputs .inps:nth-child(1){
+    margin-left: 2px;
+    background-color: #E58595;
+}
+#inputs .inps:nth-child(2){
+    background-color: #E5727E;
+}
+#inputs .inps:nth-child(3){
+    background-color: #E87C79;
+}
+#inputs .inps:nth-child(4){
+    background-color: #BC5761;
+}
+#inputs .inps:nth-child(5){
+    background-color: #C9365F;
+}
+#inputs .inps:nth-child(6){
+    background-color: #B01F57;
+}
+#inputs .inps:nth-child(7){
+    background-color: #B77266;
+}
+#inputs .inps:nth-child(8){
+    background-color: #9E6144;
+}
+#inputs .inps:nth-child(9){
+    background-color: #9B5F53;
+}
+
+
+#inputs>i{
+position: absolute;
+top: 20%;
+right: 5%;
+font-size: 20px;
+color: #888;
+    
+}
+
+
+
+
+/* ********** Page-8************** */
+#page8{
+    width: 100%;
+    height: 25%;
+    background-color: #F3EFEA;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#p-1 h3{
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+#p-1 p{
+    font-size: 28px;
+    width: 50%;
+}
+.p i{
+    font-size: 35px;
+    text-align: center;
+    /* margin-left:35px ; */
+}
+.p p{
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+/* ************** Page - 9***************** */
+#page-9{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    position: relative;
+}
+#text-cont{
+    width: 100%;
+    height: 50px;
+    /* background-color: red; */
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 50px;
+}
+#wrapper-9{
+    width: 100%;
+    height: 40%px;
+    /* background-color: rebeccapurple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    /* margin-left: 150px; */
+}
+#wrapper-9 .wrap-9{
+    width: 250px;
+    height: 440px;
+    background-color:rgb(209, 209, 209)09, 209, 209);
+}
+#wrapper-9 .wrap-9:nth-child(1){
+    margin-left:100px;
+}
+.wrap-9-top{
+    width: 100%;
+    height: 60%;
+    /* background-color: yellow; */
+    background-image: url(https://sunniesface.com/cdn/shop/products/01Kitsch.jpg?crop=center&format=pjpg&height=664&v=1664343230&width=650);
+    background-size: cover;
+    background-position: 0%;
+    transition: all ease .2s;
+}
+.wrap-9-top img{
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    object-position: center;
+}
+.wrap-9-bottom{
+    width: 100%;
+    height: 40%;
+    transition: all ease .2s;
+
+    /* background-color: green; */
+}
+.wrap-9-bottom h5{
+    font-size: 14px;
+    padding: 4px;
+}
+.wrap-9-bottom p{
+    font-size: 14px;
+    padding: 4px;
+}
+.wrap-9-bottom h6{
+    font-size: 10px;
+    font-style: italic;
+    padding: 4px;
+    color: #333;
+}
+.wrap-9-bottom button{
+    width: 240px;
+    height: 40px;
+    border-radius: 50px;
+    border: 1px solid #888;
+    font-size: 10px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 10px;
+    font-weight:600;
+    color: #333;
+    margin-top:10px ;
+    margin-left: 6px;
+}
+
+#wrap-2-9>.wrap-9-top{
+    background-image: url(https://sunniesface.com/cdn/shop/products/1-Poppy.png?crop=center&format=pjpg&height=664&v=1657921142&width=650);
+}
+#wrap-2-9>.wrap-9-top:hover{
+    background-image: url(https://sunniesface.com/cdn/shop/files/SunniesFace_LipTreat_Hover.jpg?crop=center&height=1398&v=1657920917&width=960);
+    background-position: center;
+    background-size: cover;
+}
+.wrap-9>.wrap-9-top:hover{
+    background-image: url(https://sunniesface.com/cdn/shop/files/Fluffmatte_Swoosh_15.png?crop=center&height=1398&v=1652175889&width=960);
+    background-position: center;
+    background-size: cover;
+}
+#wrapper-9>img{
+    height: 100%;  
+    padding-top: 70px;
+    padding-left: 10px;
+}
+
+
+/* *************** Page-10 ***************** */
+
+#page-10{
+    width: 100%;
+    height: 40%;
+    margin-top: 50px;
+    /* background-color: red; */
+}
+#page-10>p{
+    font-size: 40px;
+    margin-left: 103px;
+}
+#innner-page10{
+    width: 90%;
+    height: 100%;
+    /* background-color: rebeccapurple; */
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    margin: auto;
+}
+#innner-page10::-webkit-scrollbar{
+    display: none;
+}
+
+.card-10{
+    width: 250px;
+    height: 250px;
+    /* background-color: red; */
+    /* background-image: url(https://scontent.cdninstagram.com/v/t51.29350-15/356796520_242551562049733_2907755178266478024_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8ae9d6&_nc_eui2=AeGAr3ddBKQD5_drAoqMfPKinDXYC-BLXmmcNdgL4EteaRx_JaONaRAVw0jaNuy40tY&_nc_ohc=QsNYEU9wja0AX9HA2QW&_nc_oc=AQn38Y-VLffkj3h6BHiubul4GR-La2fj-vnT1oKfZkykejo-daZP4LJU9TuPJAXmox4&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AfBRLNEx24tQ6BFMSFs31EP1Sr23Puczvd_0AjJVaoUAPQ&oe=64A82771); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    margin: 15px 13px;
+    position: relative;
+}
+.card-10 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all ease .5s;
+
+}
+#overlay{
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(255, 255, 255, 0.252); */
+    position: absolute;
+    top: 0;
+    display: none;
+
+}
+.card-10 i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 50px;
+    color: black;
+
+}
+.card-10:hover #overlay{
+    display: block;
+}
+
+/* ********Footer********* */
+footer{
+    width: 100%;
+    height: 50%;
+    background-color: rebeccapurple;
+    
+}
+/* problem */
+/* .wrapper{
+    width: 100%;
+    height: 80%;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px; */
+/* } */
+.wrap{
+    /* width: 8%;
+    height: 100%;
+    background-color: #BC5761;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 30px; */
+}
+/* .wrap h4{
+    font-size: 15px;
+    margin: 30px 0;
+    text-align: center;
+}
+.wrap p{
+    font-size: 20px;
+    text-align: center;
+    margin: 15px;
+}
+.wrap-3{
+    /* width: 10%; */
+    /* display: flex; */
+    /* align-items: flex-start; */
+    /* justify-content: flex-start; */
+/* } */
+/* .wrap-3 select{ */
+    /* background-color: transparent; */
+    /* border: none; */
+    /* font-size: 20px; */
+/* } */ 
+@keyframes slide {
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translatex(calc(-100% - 30px));
+    }
+}
